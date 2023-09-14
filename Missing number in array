@@ -7,8 +7,8 @@ class Solution:
         for i in range(n - 1):
             summ += array[i]
         
-        digit = n * (n + 1) // 2
-        value = digit - summ
+        digit = n * (n + 1) / 2
+        value = int(digit) - summ
         return value
      
 
