@@ -1,0 +1,29 @@
+class Solution:
+    def duplicates(self, arr, n): 
+    	# code here
+    	arr.sort()
+        final=[]
+        for i in range(0,n-1,1):
+            if arr[i]==arr[i+1]:
+                final.append(arr[i])
+        if final==[]:
+            final.append(-1)
+        final=set(final)
+        return sorted(final)
+               
+
+#{ 
+ # Driver Code Starts
+if(__name__=='__main__'):
+    t = int(input())
+    for i in range(t):
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        res = Solution().duplicates(arr, n)
+        for i in res:
+            print(i,end=" ")
+        print()
+
+
+
+# } Driver Code Ends
